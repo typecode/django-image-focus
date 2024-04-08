@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-image-focus"
+authors = [
+  { name="Fred Every", email="fred@typecode.com" },
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+dynamic = ["version", "description"]
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = ['django']
+keywords=['python', 'django', 'focus', 'image']
+
+
+[project.urls]
+Homepage = "https://github.com/typecode/django-image-focus"
+Issues = "https://github.com/typecode/django-image-focus/issues"
+
+[tool.setuptools_scm]
+write_to = "imagefocus/_version.py"
+
