@@ -1,0 +1,7 @@
+<div class="imagefocus-point-widget" data-name="{{ widget.name }}">
+    <label>X:</label>
+    <input type="{{ widget.type }}" class="imagefocus-point-widget__display-x" value="">
+    <label>Y:</label>
+    <input type="{{ widget.type }}" class="imagefocus-point-widget__display-y" value="">
+    <input type="hidden" name="{{ widget.name }}" value="{{ widget.value|stringformat:'s' }}"  {% include "django/forms/widgets/attrs.html" %}>
+</div>
