@@ -5,6 +5,7 @@
             this.addEventListeners()
             this.getFocusPointInputValue()
             this.updateFocalPoint()
+            this.updateDisplayState()
         }
         
         getDOM (elem) {
@@ -46,6 +47,11 @@
             this.focusPointIndicator.style.top = `${this.focusPointValue.y * 100}%`
         }
 
+        updateDisplayState () {
+            console.log("updateDisplayState:", this.previewImage.getAttribute('src') !== '',  "<--")
+            this.imageFrame.classList.toggle('--has-image', this.previewImage.getAttribute('src') !== '')
+        }
+
         handleFileChange (evnt) {
             const file = this.fileInput.files[0]
             if (!file) return
@@ -53,6 +59,7 @@
             reader.onload = (evnt) => {
                 this.previewImage.src = evnt.target.result
                 this.setFocalPoint(0.5, 0.5)
+                this.updateDisplayState()
             }
             reader.readAsDataURL(file)
         }

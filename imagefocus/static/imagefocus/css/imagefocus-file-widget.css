@@ -25,6 +25,10 @@
     border-radius: 50%;
     background-color: rgba(0,0,0,0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.imagefocus-file-upload__image.--has-image .imagefocus-file-upload__focus-point {
+    display: block;
 }
 
 .imagefocus-file-upload__focus-point::before,
