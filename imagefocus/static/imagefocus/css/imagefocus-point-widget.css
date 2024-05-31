@@ -1,0 +1,13 @@
+.imagefocus-point-widget {
+    display: flex;
+    justify-content: flex-start;
+
+    label {
+        flex: 0;
+    }
+
+    input {
+        margin-right: 1em;
+        max-width: 3em;
+    }
+}
